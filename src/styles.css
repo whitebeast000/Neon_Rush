@@ -36,3 +36,12 @@ html,body,#root{margin:0;height:100%;background:var(--bg);overflow:hidden;oversc
 .tbtn.jump{border-color:var(--p);background:rgba(255,43,214,.18);min-width:150px}
 .tbtn:active{transform:scale(.94);background:rgba(255,255,255,.25)}
 @media (hover:hover) and (pointer:fine){.touch{display:none}}
+.screen{justify-content:flex-start;touch-action:pan-y}
+.screen>:first-child{margin-top:auto}
+.screen>:last-child{margin-bottom:auto}
+.about{max-width:680px;margin-top:28px;text-align:left;line-height:1.65;color:#cfd6ff;font-size:15px}
+.about h2{color:#fff;letter-spacing:.08em;text-shadow:0 0 14px var(--c)}
+.about h3{color:var(--c);margin:18px 0 6px}
+.about ul{padding-left:20px}
+.footer-links{display:flex;gap:18px;justify-content:center;margin:24px 0 8px}
+.footer-links a{color:var(--c)}
