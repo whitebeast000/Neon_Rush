@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Rush Dev Log</title>
+<meta name="description" content="Behind the scenes of Neon Rush: how the game was built and what is planned next.">
+<link rel="canonical" href="https://neon-rush-plum.vercel.app/devlog.html">
+<meta name="google-adsense-account" content="ca-pub-1751579875032730">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1751579875032730" crossorigin="anonymous"></script>
+<style>body{margin:0;background:#07071a;color:#cfd6ff;font-family:system-ui,sans-serif;line-height:1.75}main{max-width:760px;margin:auto;padding:32px 20px}h1,h2{color:#fff}h2{color:#22d3ee;margin-top:28px}a{color:#22d3ee}nav.top{display:flex;flex-wrap:wrap;gap:6px 16px;padding:14px 20px;background:#0c0c26;border-bottom:1px solid #1d1d4a}nav.top a{text-decoration:none;font-size:14px}footer{max-width:760px;margin:auto;padding:20px;border-top:1px solid #1d1d4a;font-size:14px;color:#8a93c9}.cta{display:inline-block;margin:18px 0;padding:10px 18px;border:1px solid #22d3ee;border-radius:8px;text-decoration:none;font-weight:600}</style>
+</head><body>
+<nav class="top"><a href="/">▶ Play</a><a href="/about.html">About</a><a href="/tips.html">Tips</a><a href="/difficulty.html">Difficulty</a><a href="/strategy.html">Strategy</a><a href="/devlog.html">Dev Log</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a></nav>
+<main>
+<h1>Neon Rush Dev Log</h1>
+<p>This page is a running record of how Neon Rush was made and where it is going. We share it because players often ask how a browser game like this is built, and because writing down decisions helps us improve.</p>
+<h2>Why a browser game?</h2>
+<p>We wanted anyone to be able to play within a few seconds, on almost any device, without installing anything. A web game removes every barrier: you open a link and run. It also means we can ship improvements instantly, because the next time you load the page you are playing the latest version.</p>
+<h2>Technology choices</h2>
+<p>The game is written in JavaScript. Phaser 3 provides the game loop, physics-style movement and rendering. React builds the interface around it, including the main menu, the heads-up display, the pause screen, the settings panel and the end-of-run results. Vite bundles everything and the site is deployed on Vercel. We chose this stack because it is fast to develop with and produces a small, fast-loading result.</p>
+<h2>Sound without files</h2>
+<p>Instead of loading audio files, the game generates its sound effects in the browser using the Web Audio system. This keeps the download small and lets the effects start instantly. Sound can be switched off in Settings.</p>
+<h2>Saving progress without a server</h2>
+<p>Neon Rush has no backend. Your best score, total coins and settings are stored in your browser's local storage. The advantage is privacy and simplicity: we never see your data. The trade-off is that progress does not follow you to another device or survive clearing your browser data.</p>
+<h2>Design decisions</h2>
+<ul>
+<li><b>One-hit runs</b> keep every attempt short and tense.</li>
+<li><b>Automatic running</b> reduces controls to jump and slide, which works on keyboards and touch screens alike.</li>
+<li><b>Coin arcs</b> double as visual hints for where to jump.</li>
+<li><b>Gradual speed-up</b> from 340 to 720 pixels per second keeps the first seconds friendly and the later seconds exciting.</li>
+</ul>
+<h2>Known limitations</h2>
+<p>The game currently has no moving obstacles and no background music, and it is designed for landscape orientation, so phones held upright are not yet well supported.</p>
+<h2>Roadmap</h2>
+<ol>
+<li>A layout that works well in portrait on phones.</li>
+<li>Moving obstacles for a new kind of timing challenge.</li>
+<li>Optional background music with its own volume control.</li>
+<li>More written guides based on player questions.</li>
+</ol>
+<p>Have a suggestion? Send it through the <a href="/contact.html">contact page</a>. You may also like our <a href="/tips.html">tips for a higher score</a>.</p>
+<p><a class="cta" href="/">▶ Play Neon Rush</a></p>
+</main>
+<footer>© 2026 Neon Rush · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/contact.html">Contact</a> · <a href="/">Play the game</a></footer>
+</body></html>

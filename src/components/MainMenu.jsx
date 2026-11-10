@@ -39,8 +39,12 @@ export default function MainMenu({ save, onPlay, onHow, onSettings }) {
         </ul>
         <h3>Controls</h3>
         <p>On a computer, use Space or the Up arrow to jump, the Down arrow to slide, and Esc to pause. On a phone or tablet, use the on-screen Jump and Slide buttons, or tap the screen to jump. Your best score, coins and settings are saved in your browser.</p>
-        <nav className="footer-links">
+        <nav className="footer-links" style={{flexWrap:'wrap'}}>
           <a href="/about.html">About</a>
+          <a href="/tips.html">Tips</a>
+          <a href="/difficulty.html">Difficulty</a>
+          <a href="/strategy.html">Strategy</a>
+          <a href="/devlog.html">Dev Log</a>
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/contact.html">Contact</a>
         </nav>
